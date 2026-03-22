@@ -39,10 +39,6 @@ To test the system, I focused on three use cases that reflect common personal fi
 
 ---
 
-These three use cases represent different retrieval challenges. The investing query is more educational, the budgeting query is more procedural, and the debt query is more problem solving focused. Looking at all three makes it easier to judge whether the system can handle different user intents within the same financial planning domain.
-
----
-
 ## How
 
 This section explains the technical implementation of the retrieval system, including document processing, indexing, query handling, and retrieval.
@@ -86,10 +82,7 @@ The system was implemented in Python using OpenAI’s API for embeddings and gen
 
 ---
 
-## LLM response Evaluation
-
-Overall, the LLM did an excellent job synthesizing the information that it received and providing users with proper responses; it also was able to answer follow-up questions well.
-
+## Evaluation
 
 
 ### Query Execution and Result Set
@@ -156,6 +149,10 @@ These results show that the system is generally retrieving the right information
 The nDCG score being above 0.96 also matters. It means the most relevant chunks are usually showing up near the top of the results, which is what users will actually see. Even if you retrieve good content, it does not help much if it is buried lower in the ranking.
 
 It is also worth noting that this was done with k = 5. With such a small retrieval window, every slot matters. So getting 14 out of 15 relevant chunks is a strong result. The one failure case, where a table of contents chunk was returned, is a pretty typical issue when working with raw PDF text. It is not really a model failure as much as a preprocessing issue.
+
+### LLM Evaluation
+
+Overall, the LLM did an excellent job synthesizing the information that it received and providing users with proper responses; it also was able to answer follow-up questions well.
 
 ---
 
