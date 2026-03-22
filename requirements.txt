@@ -1,0 +1,26 @@
+# IR Search Engine Requirements
+# INFO 624 Final Project
+# ------------------------------------------------------------------------------
+
+# OpenAI
+openai==1.109.1
+tiktoken==0.11.0
+
+# LangChain (for document processing and FAISS integration)
+langchain-core
+langchain-community
+langchain-text-splitters
+langchain-openai
+
+# Vector Store
+faiss-cpu
+
+# PDF Processing
+pymupdf==1.25.4
+
+# Data Analysis
+pandas
+numpy
+
+# Environment Variables
+python-dotenv

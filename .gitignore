@@ -1,0 +1,24 @@
+# Environment
+.env
+*.env
+
+# System
+.DS_Store
+
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+venv/
+env/
+
+# IR System
+faiss_index/
+sessions/
+*.pkl
+
+# Documents - PDFs are too large for GitHub
+documents/*.md
+pdfs/
